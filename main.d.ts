@@ -18,7 +18,7 @@ declare module 'react-component-export-image' {
         pdfOptions?: Partial<PDFOptions>,
     }
 
-    type ExportComponentReturn = Promise<(canvas: HTMLCanvasElement) => void>;
+    type ExportComponentReturn = Promise<(canvas: HTMLCanvasElement) => String>;
 
     export function exportComponentAsJPEG(
         node: RefObject<ReactInstance>,
