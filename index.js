@@ -77,6 +77,7 @@ const exportComponent = (node, {
         useCORS: true,
         ...html2CanvasOptions
     }).then(canvas => {
+        return canvas.toDataURL(type,1.0)
         if (type === fileType.PDF) {
             const pdf = getPDF(canvas, pdfOptions)
             pdf.addImage(
